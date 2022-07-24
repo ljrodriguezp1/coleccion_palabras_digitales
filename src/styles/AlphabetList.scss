@@ -1,0 +1,224 @@
+@import 'vars';
+
+.alphabet{
+	padding-left: map-get($map: $tokens, $key: 's56');
+
+	&-hero {
+		margin-top: map-get($map: $tokens, $key: 's40');
+		margin-bottom: map-get($map: $tokens, $key: 's40');
+		line-height: 1;
+		font-size: 20px;
+		&--back {
+			a{
+				color: #D65151;
+				text-decoration: underline;
+				font-size: 24px;
+				color: #F25764;
+				letter-spacing: 0;
+				line-height: 34px;
+				display: flex;
+				svg	{
+					font-size: 2.5rem;
+				}
+			}
+		}
+	}
+
+	&-title {
+		font-size: 48px;
+		color: #67696F;
+		letter-spacing: 0;
+		line-height: 34px;
+		font-weight: 300;
+	}
+
+	&-description {
+		margin-top: map-get($map: $tokens, $key: 's32');
+		font-size: 18px;
+		color: #21242E;
+		letter-spacing: 0;
+		line-height: 28px;
+		.highlight & {
+			font-size: 20px;
+			color: #383B44;
+			letter-spacing: 0;
+			line-height: 31px;
+		}
+	}
+
+	&-list{
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		display: flex;
+		align-items: center;
+		border-top: 2px solid #D8D8D8;
+		
+		li {
+			display: flex;
+			border: 2px solid #D8D8D8;
+			border-top: 0px solid #D8D8D8;
+			min-width: 34px;
+			height: 36px;
+			margin-right: map-get($map: $tokens, $key: 'sp14');
+			line-height: 1;
+			justify-content: center;
+    		align-items: center;
+			font-size: 24px;
+			color:#67696F;
+			text-transform: uppercase;
+			cursor: pointer;
+			&:hover{
+				background-color: $color-Citron-A1A;
+				border-color: $color-Citron-A1A;
+				color: white;
+				transition: .6s;
+			}
+		}
+	} 
+	&-item{
+		&--active{
+			border-color: $color-Citron-A1A !important;
+			background-color: $color-Citron-A1A !important;
+			color: white !important;
+		}
+	}
+	&-results {
+		margin-top: map-get($map: $tokens, $key: 's32');
+		display: flex;
+	}
+	&-side-left {
+		width: 88px;
+	}
+	&-letter {
+		width: 88px;
+		height: 88px;
+		background-color: $color-Citron-A1A;
+		color: white;
+		font-size: 60px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-transform: uppercase;
+	}
+	&-container {
+		width: 1100px;
+		margin-left: map-get($map: $tokens, $key: 's24');
+	}
+	&-result{
+		border: 2px solid #F2CF63;
+		display: flex;
+		margin-bottom: map-get($map: $tokens, $key: 's32');
+	}
+	&-letter-detail {
+		width: 50%;
+		height: 482px;
+		background-color: #F2CF63;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		position: relative;
+		text-align: right;
+		h4 {
+			font-size: 60px;
+			margin-right: map-get($map: $tokens, $key: 's16');
+			font-weight: 100;
+			&::first-letter {
+				text-transform: uppercase;
+			}
+		}
+	}
+	&-add-highlight {
+		position: absolute;
+		bottom: 0;
+		right: 2px;
+		width: 56px;
+		height: 56px;
+		background: #faecc1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		cursor: pointer;
+		&:hover {
+			color: #B14242;
+		}
+	}
+	&-detail{
+		width: 50%;
+		padding: map-get($map: $tokens, $key: 's32');
+		line-height: 1.4;
+		font-size: 18px;
+	}
+
+	&-search {
+		border: 2px solid #A1A608;
+		height: 72px;
+		margin-bottom: map-get($map: $tokens, $key: 's32');
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: map-get($map: $tokens, $key: 's32');
+		padding-right: map-get($map: $tokens, $key: 's16');
+		position: relative;
+		input {
+			width: 50% !important;
+		}
+		&-results {
+			list-style: none;
+			position: absolute;
+			top: 100%;
+			margin: 0;
+			padding: 0.5rem 2rem;
+			background: #f0f0e3ef;
+			width: 50%;
+			border: 2px solid #A1A608;
+			left: -2px;
+			li {
+				cursor: pointer;
+				&:hover {
+					font-size: 25px;
+				}
+			}
+		}
+	}
+
+	&-box-input {
+		border: 2px solid #A1A608;
+		min-height: 72px;
+		margin-bottom: map-get($map: $tokens, $key: 's32');
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-left: map-get($map: $tokens, $key: 's32');
+		padding-right: map-get($map: $tokens, $key: 's16');
+		align-self: stretch;
+		input {
+			width: 100% !important;
+		}
+		textarea {
+			padding: 1rem 0;
+			width: 100% !important;
+		}
+	}
+
+	&-add-word{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		p{
+			margin: 2rem 0;
+		}
+	}
+
+	&-no-result {
+		border: 2px dashed #A1A608;
+		padding: map-get($map: $tokens, $key: 's32');
+		padding-bottom: map-get($map: $tokens, $key: 's72');
+		font-weight: 300;
+		font-size: 32px;
+		color: #858585;
+		letter-spacing: 0;
+		line-height: 42px;
+		margin: 0;
+	}
+}

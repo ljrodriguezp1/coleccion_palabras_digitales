@@ -1,0 +1,41 @@
+.dnd-words{
+    .words{
+        &-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 0;
+            margin: 0;
+            
+        }
+        &-column{
+            &-even{
+                padding-right: 1.5rem;
+            }
+            &-odd{
+                padding-left: 1.5rem;
+            }
+        }
+    }
+    .word{
+        &-container{
+            list-style: none;
+            margin-bottom: 3rem;
+        }
+        &-title{
+            background: #F2CF63;
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+        }
+        &-definition{
+            border: 2px dashed #A1A608;
+            padding: 2rem;
+            font-size: 18px;
+            button {
+                padding: 0rem 1rem;
+                font-size: 1.2rem;
+                height: 2.2rem;
+            }
+        }
+    }
+}

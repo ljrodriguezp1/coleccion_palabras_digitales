@@ -1,0 +1,32 @@
+:root {
+	--white: #FFFFFF;
+	--black: #000000;
+	--very-light-pink: #C7C7C7;
+	--text-input-field: #F7F7F7;
+	--hospital-green: #ACD9B2;
+	--sm: 14px;
+	--md: 16px;
+	--lg: 18px;
+}
+
+$color-Medium-Carmine-B14: #B14242;
+$color-Orange-Yellow-F2C: #F2CF63;
+$color-Dark-Terra-Cotta-D65: #D65151;
+$color-Gamboge-Orange-856: #856605;
+$color-Citron-A1A: #A1A608;
+$color-Fiery-Rose-F25: #F25764;
+
+$color-DFB226: #DFB226;
+
+$tokens: (
+	"unit": #{8*1}px,
+	"sp14": 14px,
+	"s16": #{8*2}px,
+  	"s24": #{8*3}px,
+	"s32": #{8*4}px,
+	"s40": #{8*5}px,
+	"s48": #{8*6}px,
+	"s56": #{8*7}px,
+	"s64": #{8*8}px,
+	"s72": #{8*9}px,
+)

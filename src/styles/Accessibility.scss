@@ -1,0 +1,71 @@
+@import 'vars';
+
+.accessibility{
+    position: absolute;
+    right: 0;
+    top: 19.7rem;
+    display: flex;
+    &-items{
+        list-style: none;
+        li{
+            width: 56px;
+            height: 56px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            cursor: pointer;
+            transition: .7s;
+            position: absolute;
+            top: 0;
+            right: 0;
+
+            &.config{
+                background-color: $color-Medium-Carmine-B14;
+                z-index: 50;
+                svg {
+                    transition: .6s all;
+                    transform: rotate(0deg);
+                }
+            }
+            &.size-text{
+                background-color: $color-Fiery-Rose-F25;
+                z-index: 40;
+            }
+            &.hearing{
+                background-color: $color-DFB226;
+                font-size: 2rem;
+                z-index: 30;
+            }
+            &.contrast{
+                background-color: $color-Citron-A1A;
+                z-index: 20;
+            }
+            &.brightness{
+                background-color: $color-Gamboge-Orange-856;
+                z-index: 10;
+            }
+
+        }
+        &--active{
+            li.config {
+                svg{
+                    transform: rotate(180deg);
+                }
+            }
+            li.size-text{
+                margin-top: 56px;
+            }
+            .hearing {
+                margin-top: 56px * 2;
+            }
+            .contrast {
+                margin-top: 56px * 3;
+            }
+            .brightness {
+                margin-top: 56px * 4;
+            }
+        }
+    }
+}
